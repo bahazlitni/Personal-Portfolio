@@ -57,11 +57,7 @@ export default function FloatingShardsBackground() {
   }
 
   // Detect low-end device (very basic check)
-  const isLowEndDevice = () => {
-    return (
-      navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4
-    ) || (window.deviceMemory && window.deviceMemory <= 4)
-  }
+  const isLowEndDevice = () => navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4
 
   const initThreeJs = useCallback(() => {
     if (!mountRef.current) return
