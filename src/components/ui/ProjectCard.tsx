@@ -53,7 +53,7 @@ export default function ProjectCard({ project, ...props }: { project: T_Project 
             
             <p className={styles.description}>{project.description}</p>
             
-            <a href={project.liveUrl || project.githubUrl || '#'} className={styles.viewProjectButton}>
+            <a href={"/projects/" + project.linkLabel} className={styles.viewProjectButton}>
               View Project
               <div className={styles.buttonGlow}></div>
             </a>

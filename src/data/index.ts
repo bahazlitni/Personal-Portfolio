@@ -71,59 +71,71 @@ const Prototype: T_Badge = {
 
 export const projects: T_Project[] = [
    {
-      icon: "",
+      hasIcon: false,
+      hasCover: false,
       title: "Up-Xel",
       description: "My first ever 2D platformer video game.",
       status: "completed",
       lastReleaseYear: 2019,
-      version: "1.0",
+      lastVersion: "1.0",
       badges: [Pygame, Python, GameDev, Platformer2D],
-      link: "/project/Up-Xel",
-      isBig: false
+      linkLabel: "up-xel",
+      isBig: false,
+      imagesAvailable: 0
    },
    {
-      icon: "",
+      hasIcon: false,
+      hasCover: false,
       title: "Ciccle",
       description: "A 2D rythm game inspired by OSU.",
       status: "completed",
       lastReleaseYear: 2020,
-      version: "1.0",
+      lastVersion: "1.0",
       badges: [GameDev, Pygame, Python, Platformer2D],
-      link: "/project/Ciccle",
-      isBig: false
+      linkLabel: "ciccle",
+      isBig: false,
+      imagesAvailable: 0
    },
    {
-      icon: "",
+      hasIcon: false,
+      hasCover: false,
       title: "Optica",
       description: "A simulation software of geometric optics designed for educational purposes.",
       status: "completed",
       lastReleaseYear: 2023,
-      version: "1.2",
+      lastVersion: "1.2",
       badges: [Simulation, Js],
-      link: "/project/Optica",
-      isBig: true
+      linkLabel: "optica",
+      isBig: true,
+      imagesAvailable: 0
    },
    {
-      icon: "/projects/Eldara/icon.png",
+      hasIcon: true,
+      hasCover: false,
       title: "Eldara",
       description: "A simulation software of electric circuits.",
+      detailedDescription: "A powerful and intuitive circuit simulator designed for both beginners and advanced users. Featuring a user-friendly interface and highly optimized algorithms, it enables near real-time simulation of both simple and complex circuits. Ideal for educational purposes and rapid circuit prototyping.",
       status: "in development",
       lastReleaseYear: 2025,
-      version: "0.0.3 Beta",
+      lastVersion: "0.0.3 Beta",
       badges: [Simulation, Qt],
-      link: "/project/Eldara",
-      isBig: true
+      linkLabel: "eldara",
+      isBig: true,
+      imagesAvailable: 0
    },
    {
-      icon: "",
+      hasIcon: false,
+      hasCover: false,
+      githubUrl: "",
       title: "Imperial Japan",
       description: "A prototype web page with the goal of learning more design ideas.",
       status: "completed",
       lastReleaseYear: 2024,
-      version: "",
+      lastVersion: "",
       badges: [Prototype, WebDev],
-      link: "/project/Eldara",
-      isBig: false
+      linkLabel: "imperial-japan",
+      isBig: false,
+      imagesAvailable: 0
    }
 ]
 
