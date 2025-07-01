@@ -1,0 +1,243 @@
+.footer {
+   border-top: 1px solid var(--background-a50);
+   padding: 40px 0;
+   margin: auto;
+   row-gap: 40px;
+   position: relative;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   max-width: 1440px;
+   min-width: 200px;
+}
+
+
+.topSection {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.logoSection {
+  flex: 1;
+  min-width: 300px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--magenta);
+  text-shadow: 0 0 10px var(--magenta-a50);
+  margin-bottom: 15px;
+}
+
+.tagline {
+  color: var(--elephant-light);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.navSection {
+   flex: 2;
+   display: flex;
+   flex-wrap: wrap;
+   width: fit-content;
+   justify-self: center;
+   gap: 32px;
+}
+
+.navColumn {
+   min-width: 140px;
+}
+
+.navTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--cyan);
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px var(--cyan-a25);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.navTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--magenta);
+  box-shadow: 0 0 8px var(--magenta);
+}
+
+.navLinks {
+  list-style: none;
+  padding: 0;
+  display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
+
+.navLinks a {
+  color: var(--elephant-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.navLinks a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--cyan);
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: var(--cyan);
+  text-shadow: 0 0 8px var(--cyan-a50);
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.socialLink a {
+   display: flex;
+   width: fit-content;
+   align-items: center;
+   gap: 8px;
+}
+
+.socialLink a:hover {
+   color: var(--cyan);
+   text-shadow: 0 0 8px var(--cyan-a50);
+}
+
+.icon {
+  font-size: 18px;
+  color: var(--cyan);
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover .icon {
+  transform: scale(1.2);
+  color: var(--magenta);
+}
+
+.divider {
+   width: 100%;
+   height: 1px;
+   background: linear-gradient(90deg, 
+      transparent, 
+      var(--cyan-a25), 
+      var(--magenta-a25),
+      transparent
+   );
+}
+
+.bottomSection {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+}
+
+.copyright {
+  color: var(--elephant-light);
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.legalLinks a {
+  color: var(--elephant-light);
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.legalLinks a:hover {
+  color: var(--cyan);
+  text-shadow: 0 0 8px var(--cyan-a25);
+}
+
+.scrollTopButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--background-a75);
+  border: 1px solid var(--magenta);
+  color: var(--magenta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 0 15px var(--magenta-a50);
+  overflow: hidden;
+}
+
+.scrollTopButton:hover {
+  background: var(--magenta-a25);
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px var(--magenta);
+}
+
+.buttonGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(
+      45deg,
+      transparent,
+      var(--magenta-a25),
+      transparent
+   );
+  transform: translateX(-50%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.scrollTopButton:hover .buttonGlow {
+  transform: translateX(50%);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+   .topSection {
+      flex-direction: column;
+      gap: 40px;
+   }
+   
+   .navSection {
+      width: 100%;
+   }
+   
+   .bottomSection {
+      flex-direction: column;
+      text-align: center;
+   }
+   
+   .legalLinks {
+      justify-content: center;
+   }
+}

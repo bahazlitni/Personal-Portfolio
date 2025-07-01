@@ -1,0 +1,291 @@
+/* About.module.css */
+.section {
+  position: relative;
+  padding: 100px 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 40px var(--cyan-a25);
+  border: 3px solid transparent;
+  background: linear-gradient(45deg, var(--background), var(--background)) padding-box,
+              linear-gradient(135deg, var(--cyan), var(--magenta)) border-box;
+  transition: all 0.4s ease;
+}
+
+.imageGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    var(--cyan-a15) 0%,
+    transparent 70%
+  );
+  z-index: 1;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.imageWrapper:hover {
+  box-shadow: 0 0 60px var(--magenta-a40);
+  transform: scale(1.05);
+}
+
+.imageWrapper:hover .imageGlow {
+  opacity: 1;
+}
+
+.image {
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  background: var(--background-a25);
+  border: 1px solid var(--background-a50);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.nameCard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--cyan-a25);
+}
+
+.nameIcon {
+  font-size: 1.8rem;
+  color: var(--cyan);
+  background: var(--cyan-a10);
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 0 15px var(--cyan-a25);
+}
+
+.paragraph {
+  color: var(--elephant-light);
+  line-height: 1.8;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.passionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.passionCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: var(--background-a15);
+  border: 1px solid var(--background-a50);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.passionCard:hover {
+  background: var(--cyan-a10);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--cyan-a15);
+}
+
+.passionIcon {
+  font-size: 1.8rem;
+  color: var(--cyan);
+}
+
+.projectHighlight {
+  color: var(--magenta);
+  font-weight: 500;
+  text-shadow: 0 0 10px var(--magenta-a25);
+  font-style: normal;
+}
+
+.badgesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.badge, .importantBadge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+.badge {
+  background: var(--background-a25);
+  color: var(--cyan);
+  border: 1px solid var(--cyan-a25);
+}
+
+.importantBadge {
+  background: linear-gradient(90deg, var(--magenta-a25), var(--cyan-a25));
+  color: white;
+  box-shadow: 0 0 20px var(--magenta-a25);
+}
+
+.badge:hover, .importantBadge:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--magenta-a25);
+  border-color: var(--cyan);
+}
+
+.badge:hover::before, .importantBadge:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--cyan-a15),
+    var(--magenta-a15),
+    transparent
+  );
+  animation: glowSlide 1.5s infinite;
+  z-index: -1;
+}
+
+.badgeIcon {
+  font-size: 1.2rem;
+}
+
+.tooltipWrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background: var(--background-a90);
+  color: var(--elephant-light);
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  font-weight: normal;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--cyan-a25);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.tooltipWrapper:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-15px);
+}
+
+@keyframes glowSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.8rem;
+  }
+  
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nameCard {
+    justify-content: center;
+  }
+  
+  .passionGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .badge, .importantBadge {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.3rem;
+  }
+  
+  .section {
+    padding: 70px 15px;
+  }
+  
+  .imageWrapper {
+    width: 220px;
+    height: 220px;
+  }
+}
