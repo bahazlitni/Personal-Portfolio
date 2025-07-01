@@ -121,6 +121,7 @@ export const projects: T_Project[] = [
       badges: [Simulation, Qt],
       linkLabel: "eldara",
       isBig: true,
+      githubUrl: "https://github.com/bahazlitni/Eldara",
       imagesAvailable: 0
    },
    {

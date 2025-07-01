@@ -13,8 +13,8 @@
 
 .buttonsContainer {
    display: flex;
-   flex-direction: row;
    column-gap: 3rem;
+   row-gap: 1.5rem;
 }
 
 .hero h1 {
@@ -34,3 +34,8 @@
   text-shadow: 0 0 20px var(--magenta-a25);
 }
 
+@media (max-width: 768px) {
+   .buttonsContainer {
+      flex-direction: column;
+   }
+}
