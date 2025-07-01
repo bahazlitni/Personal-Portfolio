@@ -31,12 +31,11 @@ export default function About() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 200 }}
           >
-            <div className={styles.imageGlow}></div>
             <Image
               src="/pfp.png"
               alt="Baha Zlitni Portrait"
-              width={280}
-              height={280}
+              width={256}
+              height={256}
               className={styles.image}
               priority
             />
