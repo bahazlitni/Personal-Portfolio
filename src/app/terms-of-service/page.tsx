@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import styles from '@/shared-css-modules/privacy-terms.module.css'
 
 export default function PrivacyTerms() {
@@ -23,17 +22,17 @@ export default function PrivacyTerms() {
                   This is my personal portfolio website. You may:
                 </p>
                 <ul className={styles.list}>
-                  <li><span className={styles.listBullet}>◆</span> View all content freely</li>
-                  <li><span className={styles.listBullet}>◆</span> Share the website link with anyone</li>
-                  <li><span className={styles.listBullet}>◆</span> Use the HTML/CSS as inspiration for your own projects</li>
+                  <li><span className={styles.listBullet}>-</span> View all content freely</li>
+                  <li><span className={styles.listBullet}>-</span> Share the website link with anyone</li>
+                  <li><span className={styles.listBullet}>-</span> Use the HTML/CSS as inspiration for your own projects</li>
                 </ul>
                 <p>
                   You may <strong>not</strong>:
                 </p>
                 <ul className={styles.list}>
-                  <li><span className={styles.listBullet}>◆</span> Modify any content on this website</li>
-                  <li><span className={styles.listBullet}>◆</span> Monetize or commercially exploit this website's content</li>
-                  <li><span className={styles.listBullet}>◆</span> Abuse the website through excessive requests or malicious activities</li>
+                  <li><span className={styles.listBullet}>-</span> Modify any content on this website</li>
+                  <li><span className={styles.listBullet}>-</span> Monetize or commercially exploit this website's content</li>
+                  <li><span className={styles.listBullet}>-</span> Abuse the website through excessive requests or malicious activities</li>
                 </ul>
               </div>
               
@@ -43,10 +42,10 @@ export default function PrivacyTerms() {
                   When contacting me through the website's contact form:
                 </p>
                 <ul className={styles.list}>
-                  <li><span className={styles.listBullet}>◆</span> Do <strong>not</strong> spam or send unsolicited commercial emails</li>
-                  <li><span className={styles.listBullet}>◆</span> You may use a pseudonym or fake email address</li>
-                  <li><span className={styles.listBullet}>◆</span> I will respond to the email address you provide</li>
-                  <li><span className={styles.listBullet}>◆</span> I do not store or share your email content</li>
+                  <li><span className={styles.listBullet}>-</span> Do <strong>not</strong> spam or send unsolicited commercial emails</li>
+                  <li><span className={styles.listBullet}>-</span> You may use a pseudonym or fake email address</li>
+                  <li><span className={styles.listBullet}>-</span> I will respond to the email address you provide</li>
+                  <li><span className={styles.listBullet}>-</span> I do not store or share your email content</li>
                 </ul>
                 <p>
                   All email communications are treated as private correspondence. I reserve the right to 
@@ -64,16 +63,16 @@ export default function PrivacyTerms() {
                   You are granted a limited license to:
                 </p>
                 <ul className={styles.list}>
-                  <li><span className={styles.listBullet}>◆</span> View and share the content</li>
-                  <li><span className={styles.listBullet}>◆</span> Use the code as inspiration for learning purposes</li>
+                  <li><span className={styles.listBullet}>-</span> View and share the content</li>
+                  <li><span className={styles.listBullet}>-</span> Use the code as inspiration for learning purposes</li>
                 </ul>
                 <p>
                   You are <strong>not</strong> permitted to:
                 </p>
                 <ul className={styles.list}>
-                  <li><span className={styles.listBullet}>◆</span> Copy large portions of code for commercial use</li>
-                  <li><span className={styles.listBullet}>◆</span> Claim my work as your own</li>
-                  <li><span className={styles.listBullet}>◆</span> Create derivative works without permission</li>
+                  <li><span className={styles.listBullet}>-</span> Copy large portions of code for commercial use</li>
+                  <li><span className={styles.listBullet}>-</span> Claim my work as your own</li>
+                  <li><span className={styles.listBullet}>-</span> Create derivative works without permission</li>
                 </ul>
                 <p>
                   Specific projects may have their own licenses - please check individual project pages for details.
@@ -86,11 +85,11 @@ export default function PrivacyTerms() {
                   You agree not to engage in any of the following activities:
                 </p>
                 <ul className={styles.list}>
-                  <li><span className={styles.listBullet}>◆</span> Attempting to disrupt or compromise website security</li>
-                  <li><span className={styles.listBullet}>◆</span> Sending automated queries or excessive requests</li>
-                  <li><span className={styles.listBullet}>◆</span> Using the website for illegal activities</li>
-                  <li><span className={styles.listBullet}>◆</span> Impersonating others in communications</li>
-                  <li><span className={styles.listBullet}>◆</span> Harassing or threatening behavior</li>
+                  <li><span className={styles.listBullet}>-</span> Attempting to disrupt or compromise website security</li>
+                  <li><span className={styles.listBullet}>-</span> Sending automated queries or excessive requests</li>
+                  <li><span className={styles.listBullet}>-</span> Using the website for illegal activities</li>
+                  <li><span className={styles.listBullet}>-</span> Impersonating others in communications</li>
+                  <li><span className={styles.listBullet}>-</span> Harassing or threatening behavior</li>
                 </ul>
               </div>
               
@@ -101,9 +100,9 @@ export default function PrivacyTerms() {
                   regarding:
                 </p>
                 <ul className={styles.list}>
-                  <li><span className={styles.listBullet}>◆</span> Website availability or uptime</li>
-                  <li><span className={styles.listBullet}>◆</span> Accuracy of information</li>
-                  <li><span className={styles.listBullet}>◆</span> Freedom from errors or bugs</li>
+                  <li><span className={styles.listBullet}>-</span> Website availability or uptime</li>
+                  <li><span className={styles.listBullet}>-</span> Accuracy of information</li>
+                  <li><span className={styles.listBullet}>-</span> Freedom from errors or bugs</li>
                 </ul>
               </div>
               

@@ -1,12 +1,10 @@
 'use client'
 import { T_Project, T_ProjectStatus } from "@/types"
 import styles from "./ProjectCard.module.css"
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-
-function getStatusClassName(status: T_ProjectStatus) {
-   return styles.status + " " + (status == "completed" ? styles.completedStatus : styles.underDevelopmentStatus)
-}
+import {InfoBadge} from "@/components/ui/Badges"
+import CoverImage from "@/components/ui/CoverImage"
+import Icon from "@/components/ui/Icon"
 
 export default function ProjectCard({ project, ...props }: { project: T_Project }) {
    return (
@@ -16,30 +14,23 @@ export default function ProjectCard({ project, ...props }: { project: T_Project 
          whileHover={{ y: -10 }}
          transition={{ duration: 0.3 }}
       >
+          {project.coverPublicLink &&
+          <CoverImage
+            className={styles.cover}
+            src={project.coverPublicLink}
+            width={1280}
+            height={720}
+            brightness={60}
+          />
+        }
          <div className={styles.cardGlow}></div>
          <div className={styles.cardContent}>
             <div className={styles.cardHeader} {...props}>
-               <div className={styles.titleRow}>
-                 <h2 className={styles.title}>{project.title}</h2>
-                 <div className={styles.icons}>
-                   {project.githubUrl && (
-                     <a href={project.githubUrl} className={styles.iconLink} aria-label="GitHub repository">
-                       <FaGithub />
-                     </a>
-                   )}
-                   {project.liveUrl && (
-                     <a href={project.liveUrl} className={styles.iconLink} aria-label="Live project">
-                       <FaExternalLinkAlt />
-                     </a>
-                   )}
-                 </div>
-               </div>
-               <div className={styles.metaRow}>
-                 <p className={styles.year}>{project.lastReleaseYear}</p>
-                 <p className={getStatusClassName(project.status)}>
-                   {project.status === "completed" ? "Completed" : "In Development"}
-                 </p>
-               </div>
+                <h2 className={styles.title}>{project.title}</h2>
+                <div className={styles.metaRow}>
+                  <InfoBadge variant="glow" info={project.lastReleaseYear} color="black" />
+                  <InfoBadge variant="glow" info={project.status} color={project.status === "completed" ? "cyan" : "magenta"} />
+                </div>
             </div>
             
             <div className={styles.tags}>
@@ -53,10 +44,15 @@ export default function ProjectCard({ project, ...props }: { project: T_Project 
             
             <p className={styles.description}>{project.description}</p>
             
-            <a href={"/projects/" + project.linkLabel} className={styles.viewProjectButton}>
-              View Project
-              <div className={styles.buttonGlow}></div>
-            </a>
+            <div className={styles.buttonsContainer}>
+              <a className="saturated-flare M-button" href={"/projects/" + project.linkLabel}>
+                View Project
+              </a>
+              {project.githubUrl && <a className="cyan-flare M-button" href={project.githubUrl}>
+                <Icon name="github" />
+                View On Github
+              </a>}
+            </div>
          </div>
       </motion.div>
    )

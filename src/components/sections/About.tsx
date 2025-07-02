@@ -5,6 +5,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { FaGraduationCap, FaCode, FaPalette, FaGamepad, FaLightbulb } from "react-icons/fa"
 import AnimH1 from "@/components/ui/AnimH1"
+import {Badge} from "@/components/ui/Badges"
 
 export default function About() {
   return (
@@ -82,38 +83,36 @@ export default function About() {
           transition={{ delay: 0.4, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className={`${styles.importantBadge} ${styles.tooltipWrapper}`}>
+          <Badge size="L" isImportant>
             <FaGraduationCap className={styles.badgeIcon} />
             INSA Toulouse
-            <div className={styles.tooltip}>
-              INSA Toulouse is one of France's top engineering schools.
-            </div>
-          </div>
-          
-          <div className={styles.badge}>
+          </Badge>
+
+          <Badge size="L">
             <FaCode className={styles.badgeIcon} />
             Web Developer
-          </div>
+          </Badge>
           
-          <div className={styles.badge}>
+          <Badge size="L">
             <FaPalette className={styles.badgeIcon} />
             UI/UX Designer
-          </div>
-          
-          <div className={styles.badge}>
+          </Badge>
+
+          <Badge size="L">
             <FaCode className={styles.badgeIcon} />
             React & Next.js
-          </div>
-          
-          <div className={styles.badge}>
+          </Badge>
+
+          <Badge size="L">
             <FaLightbulb className={styles.badgeIcon} />
             Creative Technologist
-          </div>
-          
-          <div className={styles.badge}>
+          </Badge>
+
+          <Badge size="L">
             <FaPalette className={styles.badgeIcon} />
             Digital Artist
-          </div>
+          </Badge>
+
         </motion.div>
       </motion.div>
     </section>

@@ -1,0 +1,23 @@
+.coverWrapper {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: -999;
+   height: 50vh;
+   min-height: 360px;
+}
+
+.cover {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.coverVeil {
+   background: linear-gradient(0deg, var(--background) 0%, var(--background-a50) 75%, var(--background-a50) 100%);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}

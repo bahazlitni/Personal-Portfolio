@@ -1,26 +1,33 @@
-export interface T_Badge  {
-   isImportant: boolean,
-   label: string,
-}
+export type T_Size = "S" | "M" | "L" | "XL"
 
 export type T_ProjectStatus = "in development" | "completed"
 
+export interface T_CarouselImage {
+   title?: string
+   description?: string
+   publicLink: string
+   width: number
+   height: number
+   brightness: number
+   year?: number
+}
+
 export interface T_Project {
-   hasIcon: boolean
-   hasCover: boolean
+   iconPublicLink?: string
+   coverPublicLink?: string
    title: string
    description: string
    status: T_ProjectStatus
    lastReleaseYear: number
    lastVersion: string
-   badges: T_Badge[]
+   badges: string[]
    linkLabel: string
    isBig: boolean
    detailedDescription?: string
    githubUrl?: string
    liveUrl?: string
    technologies?: string[]
-   imagesAvailable: number
+   images: T_CarouselImage[]
 }
 
 export interface T_ContactLink {
@@ -29,11 +36,3 @@ export interface T_ContactLink {
    icon: string
 }
 
-export interface T_CarouselImage {
-   title: string
-   description?: string
-   link: string
-   width: number
-   height: number
-   brightness: number
-}

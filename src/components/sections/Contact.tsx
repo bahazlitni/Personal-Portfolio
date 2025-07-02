@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import styles from "./Contact.module.css"
 import { contactLinks } from "@/data"
 import { T_ContactLink } from "@/types"
@@ -7,6 +7,7 @@ import Select from '@/components/ui/Select'
 import Icon from '@/components/ui/Icon'
 import AnimH1 from '../ui/AnimH1'
 import Toast from '@/components/ui/Toast'
+import FlaredLink from '@/components/ui/FlaredLink'
 
 // Options for custom select
 const subjectOptions = [
@@ -172,21 +173,19 @@ function ContactForm(){
                placeholder="Please specify your full name"
                className={`${styles.input} ${formData.omitName ? styles.disabledInput : ''}`}
             />
-            <div className={styles.checkboxGroup}>
-               <div className={styles.checkboxContainer}>
-                  <input
-                     type="checkbox"
-                     id="omitName"
-                     name="omitName"
-                     checked={formData.omitName}
-                     onChange={handleChange}
-                     className={styles.checkbox}
-                  />
-                  <div className={styles.checkboxCustom}></div>
-               </div>
-               <label htmlFor="omitName">Refuse to share</label>
+            <div className={styles.checkboxContainer}>
+               <input
+                  type="checkbox"
+                  id="omitName"
+                  name="omitName"
+                  checked={formData.omitName}
+                  onChange={handleChange}
+                  className={styles.checkbox}
+               />
+               <label htmlFor="omitName">Abstentiate</label>
             </div>
          </div>
+
          <div className={styles.formGroup}>
             <label htmlFor="email">E-mail</label>
             <input
@@ -282,7 +281,7 @@ function ContactForm(){
       <div className={styles.buttonContainer}>
          <button 
             type="submit" 
-            className={styles.submitButton}
+            className="L-button magenta-flare"
             disabled={isSubmitting}
          >
             <Icon name="send" />
@@ -310,16 +309,15 @@ export default function Contact() {
          <AnimH1>Contact Me</AnimH1>
          <div className={styles.linksContainer}>
             {contactLinks.map((link: T_ContactLink) => (
-               <a 
+               <FlaredLink
+                  color="cyan"
+                  size="L"
                   key={link.name} 
                   href={link.url} 
-                  className={styles.socialLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
                >
                   <Icon name={link.icon} />
                   {link.name}
-               </a>
+               </FlaredLink>
             ))}
          </div>
          <ContactForm />

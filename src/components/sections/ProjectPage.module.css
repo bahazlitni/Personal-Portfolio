@@ -1,7 +1,126 @@
 .section {
-
+   justify-content: flex-start;
+   align-items: flex-start;
+   width: 100%;
+   gap: 40px
 }
 
-.warning {
-  color: var(--magenta);
+.hero {
+   display: flex;
+   align-items: center;
+   gap: 48px;
+   height: fit-content;
+   width: 100%;
+}
+.heroContent {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+.icon {
+  position: relative;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+.badgesContainer {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.detailedDescription {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--elephant-light);
+}
+
+.carousel {
+   width: 100%;
+}
+
+.techContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.techBadge {
+  position: relative;
+  padding: 8px 18px;
+  background: var(--background-a25);
+  border: 1px solid var(--cyan-a25);
+  border-radius: 30px;
+  font-size: 0.9rem;
+  color: var(--cyan);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.techGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--cyan-a10),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  z-index: -1;
+}
+
+.techBadge:hover .techGlow {
+  transform: translateX(100%);
+}
+
+.linksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+   .hero {
+      flex-direction: column;
+   }
+   
+   .title {
+      font-size: 2.5rem;
+   }
+   
+   .sectionTitle {
+      font-size: 1.8rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .section {
+      padding: 60px 15px;
+   }
+   
+   .title {
+      font-size: 2rem;
+   }
+   
+   .iconWrapper {
+      width: 80px;
+      height: 80px;
+   }
+   
+   .link {
+      min-width: 100%;
+   }
 }

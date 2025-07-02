@@ -81,33 +81,6 @@
    gap: 12px;
 }
 
-.navLinks a {
-  color: var(--elephant-light);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-  position: relative;
-}
-
-.navLinks a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--cyan);
-  transition: width 0.3s ease;
-}
-
-.navLinks a:hover {
-  color: var(--cyan);
-  text-shadow: 0 0 8px var(--cyan-a50);
-}
-
-.navLinks a:hover::after {
-  width: 100%;
-}
 
 .socialLink a {
    display: flex;

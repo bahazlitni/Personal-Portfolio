@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import styles from '@/shared-css-modules/privacy-terms.module.css'
 
 export default function PrivacyTerms() {
@@ -23,11 +22,11 @@ export default function PrivacyTerms() {
                   When you visit this website:
                 </p>
                 <ul className={styles.list}>
-                  <li><span className={styles.listBullet}>◆</span> I <strong>do not know</strong> who you are</li>
-                  <li><span className={styles.listBullet}>◆</span> I <strong>do not know</strong> when you visited</li>
-                  <li><span className={styles.listBullet}>◆</span> I <strong>do not know</strong> where you're visiting from</li>
-                  <li><span className={styles.listBullet}>◆</span> I <strong>do not know</strong> what pages you viewed</li>
-                  <li><span className={styles.listBullet}>◆</span> I <strong>do not know</strong> how long you stayed</li>
+                  <li><span className={styles.listBullet}>-</span> I <strong>do not know</strong> who you are</li>
+                  <li><span className={styles.listBullet}>-</span> I <strong>do not know</strong> when you visited</li>
+                  <li><span className={styles.listBullet}>-</span> I <strong>do not know</strong> where you're visiting from</li>
+                  <li><span className={styles.listBullet}>-</span> I <strong>do not know</strong> what pages you viewed</li>
+                  <li><span className={styles.listBullet}>-</span> I <strong>do not know</strong> how long you stayed</li>
                 </ul>
                 <p>
                   This website contains no tracking mechanisms whatsoever. Your visit is completely private.
@@ -40,11 +39,11 @@ export default function PrivacyTerms() {
                   If you choose to contact me through the contact form:
                 </p>
                 <ul className={styles.list}>
-                  <li><span className={styles.listBullet}>◆</span> The email is sent directly to my personal inbox</li>
-                  <li><span className={styles.listBullet}>◆</span> I can see the information you voluntarily provide in the email</li>
-                  <li><span className={styles.listBullet}>◆</span> This information is <strong>not stored</strong> in any database</li>
-                  <li><span className={styles.listBullet}>◆</span> I <strong>do not share</strong> this information with anyone</li>
-                  <li><span className={styles.listBullet}>◆</span> I treat emails as private correspondence</li>
+                  <li><span className={styles.listBullet}>-</span> The email is sent directly to my personal inbox</li>
+                  <li><span className={styles.listBullet}>-</span> I can see the information you voluntarily provide in the email</li>
+                  <li><span className={styles.listBullet}>-</span> This information is <strong>not stored</strong> in any database</li>
+                  <li><span className={styles.listBullet}>-</span> I <strong>do not share</strong> this information with anyone</li>
+                  <li><span className={styles.listBullet}>-</span> I treat emails as private correspondence</li>
                 </ul>
                 <p>
                   Once I respond to your email, you can ask me to delete the conversation from my inbox. I do not maintain 
@@ -58,11 +57,11 @@ export default function PrivacyTerms() {
                   This website does not use:
                 </p>
                 <ul className={styles.list}>
-                  <li><span className={styles.listBullet}>◆</span> Cookies of any kind</li>
-                  <li><span className={styles.listBullet}>◆</span> Analytics tracking</li>
-                  <li><span className={styles.listBullet}>◆</span> Third-party scripts</li>
-                  <li><span className={styles.listBullet}>◆</span> Advertising trackers</li>
-                  <li><span className={styles.listBullet}>◆</span> Social media widgets</li>
+                  <li><span className={styles.listBullet}>-</span> Cookies of any kind</li>
+                  <li><span className={styles.listBullet}>-</span> Analytics tracking</li>
+                  <li><span className={styles.listBullet}>-</span> Third-party scripts</li>
+                  <li><span className={styles.listBullet}>-</span> Advertising trackers</li>
+                  <li><span className={styles.listBullet}>-</span> Social media widgets</li>
                 </ul>
                 <p>
                   Your visit remains completely anonymous and untracked.
@@ -75,8 +74,8 @@ export default function PrivacyTerms() {
                   This is a static website built with:
                 </p>
                 <ul className={styles.list}>
-                  <li><span className={styles.listBullet}>◆</span> Next.js for frontend rendering</li>
-                  <li><span className={styles.listBullet}>◆</span> Vercel for hosting</li>
+                  <li><span className={styles.listBullet}>-</span> Next.js for frontend rendering</li>
+                  <li><span className={styles.listBullet}>-</span> Vercel for hosting</li>
                 </ul>
                 <p>
                   The hosting provider (Vercel) may collect standard server logs, but these contain no 

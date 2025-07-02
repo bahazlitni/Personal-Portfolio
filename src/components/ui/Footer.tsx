@@ -38,20 +38,20 @@ export default function Footer() {
             <div className={styles.navColumn}>
                <h4 className={styles.navTitle}>Navigation</h4>
                <ul className={styles.navLinks}>
-                  <li><a href="/#home">Home</a></li>
-                  <li><a href="/#projects">Projects</a></li>
-                  <li><a href="/#about">About</a></li>
-                  <li><a href="/#contact">Contact</a></li>
+                  <li><a className="navLink" href="/#home">Home</a></li>
+                  <li><a className="navLink" href="/#projects">Projects</a></li>
+                  <li><a className="navLink" href="/#about">About</a></li>
+                  <li><a className="navLink" href="/#contact">Contact</a></li>
                </ul>
             </div>
 
             <div className={styles.navColumn}>
                <h4 className={styles.navTitle}>Projects</h4>
                <ul className={styles.navLinks}>
-                  <li><a href="#">Eldara</a></li>
-                  <li><a href="#">Ciccle</a></li>
-                  <li><a href="#">Up-Xel</a></li>
-                  <li><a href="#">Optica</a></li>
+                  <li><a className="navLink" href="/projects/eldara">Eldara</a></li>
+                  <li><a className="navLink" href="/projects/ciccle">Ciccle</a></li>
+                  <li><a className="navLink" href="/projects/up-xel">Up-Xel</a></li>
+                  <li><a className="navLink" href="/projects/optica">Optica</a></li>
                </ul>
             </div>
 
@@ -61,6 +61,7 @@ export default function Footer() {
                   {contactLinks.map((link: T_ContactLink) => (
                      <li key={link.name} className={styles.socialLink}>
                         <a
+                           className="navLink"
                            href={link.url}
                            target="_blank"
                            rel="noopener noreferrer"

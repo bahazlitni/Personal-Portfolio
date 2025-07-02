@@ -1,0 +1,73 @@
+.badge, .infoBadge {
+   position: relative;
+   border-radius: 999px;
+   text-transform: capitalize;
+   user-select: none;
+   transition: all 0.3s ease-in-out;
+}
+
+.badge {
+   display: flex;
+   align-items: center;
+   overflow: hidden;
+   border: 1px solid var(--cyan-a25);
+   background: var(--background-a25);
+   color: var(--cyan);
+   border-radius: 999px;
+   user-select: none;
+}
+.infoBadge {
+   font-weight: 600;
+}
+
+.important {
+   background: linear-gradient(90deg, var(--magenta-a25), var(--cyan-a25));
+   color: white;
+   border: 1px solid transparent;
+}
+
+.badge:hover {
+   border-color: var(--cyan);
+}
+
+.glow.cyan {
+   background: var(--cyan-a25);
+   box-shadow: 0 2px 12px var(--cyan-a25);
+   color: var(--cyan);
+}
+.glow.magenta {
+   background: var(--magenta-a25);
+   box-shadow: 0 2px 15px var(--magenta-a25);
+   color: var(--magenta);
+}
+.glow.black {
+   background: var(--background-a25);
+   box-shadow: 0 2px 12px var(--cyan-a25);
+   color: var(--cyan);
+}
+.glow.white {
+   background: rgba(255, 255, 255, 0.15);
+   box-shadow: 0 2px 12px rgba(255, 255, 255, 0.1);
+   color: white;
+}
+
+.outline.cyan {
+   background: var(--background-a25);
+   outline: 1px solid var(--cyan-a50);
+   color: var(--cyan);
+}
+.outline.magenta {
+   background: var(--background-a25);
+   outline: 1px solid var(--magenta-a50);
+   color: var(--magenta);
+}
+.outline.black {
+   background: var(--background-a50);
+   outline: 1px solid rgba(255, 255, 255, 0.15);
+   color: #AAA;
+}
+.outline.white {
+   background: var(--background-a25);
+   outline: 1px solid rgba(255, 255, 255, 0.25);
+   color: white;
+}

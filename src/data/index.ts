@@ -1,4 +1,4 @@
-import { T_Project, T_Badge, T_ContactLink } from "@/types"
+import { T_Project, T_ContactLink } from "@/types"
 
 export const navbarLinks = [
    { href: "/#home", label: "Home" },
@@ -8,71 +8,24 @@ export const navbarLinks = [
    { href: "/#contact", label: "Contact" },
 ]
 
-
-
-const Python: T_Badge = {
-   label: "Python",
-   isImportant: true
-}
-const Cpp: T_Badge = {
-   label: "C/C++",
-   isImportant: true
-}
-const Js: T_Badge = {
-   label: "Javascript",
-   isImportant: true
-}
-const Ts: T_Badge = {
-   label: "Typescript",
-   isImportant: true
-}
-const NextJs: T_Badge = {
-   label: "Next.js",
-   isImportant: true
-}
-const GameDev: T_Badge = {
-   label: "Game Dev",
-   isImportant: true
-}
-const WebDev: T_Badge = {
-   label: "Web Dev",
-   isImportant: true
-}
-const WebDesign: T_Badge = {
-   label: "Web Design",
-   isImportant: true
-}
-
-const Pygame: T_Badge = {
-   label: "Pygame",
-   isImportant: false
-}
-const Platformer2D: T_Badge = {
-   label: "Platformer 2D",
-   isImportant: false
-}
-const Software: T_Badge = {
-   label: "Software",
-   isImportant: false
-}
-const Qt: T_Badge = {
-   label: "Qt",
-   isImportant: false
-}
-const Simulation: T_Badge = {
-   label: "Simulation",
-   isImportant: true
-}
-const Prototype: T_Badge = {
-   label: "Prototype",
-   isImportant: false
-}
-
+// Badge strings
+const Python = "Python"
+const Cpp = "C/C++"
+const Js = "Javascript"
+const Ts = "Typescript"
+const NextJs = "Next.js"
+const GameDev = "Game Dev"
+const WebDev = "Web Dev"
+const WebDesign = "Web Design"
+const Pygame = "Pygame"
+const Platformer2D = "Platformer 2D"
+const Software = "Software"
+const Qt = "Qt"
+const Simulation = "Simulation"
+const Prototype = "Prototype"
 
 export const projects: T_Project[] = [
    {
-      hasIcon: false,
-      hasCover: false,
       title: "Up-Xel",
       description: "My first ever 2D platformer video game.",
       status: "completed",
@@ -81,11 +34,9 @@ export const projects: T_Project[] = [
       badges: [Pygame, Python, GameDev, Platformer2D],
       linkLabel: "up-xel",
       isBig: false,
-      imagesAvailable: 0
+      images: []
    },
    {
-      hasIcon: false,
-      hasCover: false,
       title: "Ciccle",
       description: "A 2D rythm game inspired by OSU.",
       status: "completed",
@@ -94,24 +45,44 @@ export const projects: T_Project[] = [
       badges: [GameDev, Pygame, Python, Platformer2D],
       linkLabel: "ciccle",
       isBig: false,
-      imagesAvailable: 0
+      images: []
    },
    {
-      hasIcon: false,
-      hasCover: false,
+      coverPublicLink: "/projects/optica/cover.png",
       title: "Optica",
       description: "A simulation software of geometric optics designed for educational purposes.",
       status: "completed",
       lastReleaseYear: 2023,
-      lastVersion: "1.2",
+      lastVersion: "0.0.3",
       badges: [Simulation, Js],
       linkLabel: "optica",
       isBig: true,
-      imagesAvailable: 0
+      images: [
+         {
+            title: "Optica",
+            description: "A screenshot of Optica software.",
+            publicLink: "/projects/optica/image-0.png",
+            width: 1600,
+            height: 900,
+            brightness: 0.2
+         },
+         {
+            publicLink: "/projects/optica/image-1.png",
+            width: 1600,
+            height: 900,
+            brightness: 0.2
+         },
+         {
+            publicLink: "/projects/optica/image-2.png",
+            width: 1600,
+            height: 900,
+            brightness: 0.2
+         }
+      ]
    },
    {
-      hasIcon: true,
-      hasCover: false,
+      iconPublicLink: "/projects/eldara/icon.png",
+      coverPublicLink: "/projects/eldara/cover.png",
       title: "Eldara",
       description: "A simulation software of electric circuits.",
       detailedDescription: "A powerful and intuitive circuit simulator designed for both beginners and advanced users. Featuring a user-friendly interface and highly optimized algorithms, it enables near real-time simulation of both simple and complex circuits. Ideal for educational purposes and rapid circuit prototyping.",
@@ -122,11 +93,54 @@ export const projects: T_Project[] = [
       linkLabel: "eldara",
       isBig: true,
       githubUrl: "https://github.com/bahazlitni/Eldara",
-      imagesAvailable: 0
+      images: [
+         {
+            title: "Eldara Circuit Simulation",
+            description: "A screenshot of the Eldara circuit simulation software.",
+            publicLink: "/projects/eldara/image-0.png",
+            width: 1600,
+            height: 854,
+            brightness: 0.2
+         },
+                  {
+            publicLink: "/projects/eldara/image-0.png",
+            width: 1600,
+            height: 854,
+            brightness: 0.2
+         },
+         {
+            publicLink: "/projects/eldara/image-1.png",
+            width: 1600,
+            height: 854,
+            brightness: 0.2
+         },
+         {
+            publicLink: "/projects/eldara/image-2.png",
+            width: 1600,
+            height: 854,
+            brightness: 0.2
+         },
+         {
+            publicLink: "/projects/eldara/image-3.png",
+            width: 1600,
+            height: 854,
+            brightness: 0.2
+         },
+         {
+            publicLink: "/projects/eldara/image-4.png",
+            width: 1600,
+            height: 854,
+            brightness: 0.2
+         },
+         {
+            publicLink: "/projects/eldara/image-5.png",
+            width: 1600,
+            height: 854,
+            brightness: 0.2
+         }
+      ]
    },
    {
-      hasIcon: false,
-      hasCover: false,
       githubUrl: "",
       title: "Imperial Japan",
       description: "A prototype web page with the goal of learning more design ideas.",
@@ -136,10 +150,9 @@ export const projects: T_Project[] = [
       badges: [Prototype, WebDev],
       linkLabel: "imperial-japan",
       isBig: false,
-      imagesAvailable: 0
+      images: []
    }
 ]
-
 
 export const experiences = [
    {
@@ -180,9 +193,9 @@ export const experiences = [
    },
 ]
 
-
 export const contactLinks: T_ContactLink[] = [
-   { url: "https://www.linkedin.com/in/baha-zlitni/", name: "LinkedIn", icon: "linkedin" },
+   { url: "https://www.instagram.com/baha_zlitni", name: "Instagram", icon: "instagram" },
+   { url: "https://www.linkedin.com/in/baha-zlitni", name: "LinkedIn", icon: "linkedin" },
    { url: "https://www.github.com/BahaZlitni", name: "Github", icon: "github" },
    { url: "mailto:bahazlitni989@gmail.com", name: "bahazlitni989@gmail.com", icon: "email" }
 ]

@@ -1,0 +1,232 @@
+.carousel {
+   position: relative;
+   border-radius: 12px;
+   overflow: hidden;
+   border: 1px solid var(--background-a50);
+   transition: all 0.3s ease;
+   border-color: rgba(255, 255, 255, 0.2);
+   max-height: 80vh;
+   min-height: 360px;
+   aspect-ratio: 16/9;
+   cursor: zoom-in;
+}
+
+.carousel:hover {
+   border-color: var(--cyan-a50);
+}
+
+.fullScreen {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   z-index: 1000;
+   border: none;
+   border-radius: 0;
+   cursor: zoom-out;
+}
+
+.imageContainer {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   cursor: pointer;
+}
+
+.imageWrapper {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.image {
+   width: 100%;
+   height: 100%;
+   object-fit: contain
+}
+
+.infoOverlay {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   padding: 24px;
+   background: linear-gradient(to top, var(--background-a90), transparent);
+   color: white;
+   z-index: 2;
+}
+
+.title {
+   font-size: 1.8rem;
+   font-weight: 700;
+   margin-bottom: 8px;
+   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.description {
+   font-size: 1rem;
+   line-height: 1.5;
+   margin-bottom: 12px;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   color: var(--elephant-light);
+   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.year {
+   display: inline-block;
+   padding: 4px 12px;
+   background: var(--cyan-a25);
+   border-radius: 20px;
+   font-size: 0.9rem;
+   font-weight: 500;
+   color: var(--cyan);
+   box-shadow: 0 0 10px var(--cyan-a25);
+}
+
+.fullScreenTitle {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   padding: 20px;
+   text-align: center;
+   color: white;
+   z-index: 2;
+}
+
+.fullScreenTitle h3 {
+   font-size: 2rem;
+   font-weight: 700;
+   text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.controls {
+   position: absolute;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   padding: 12px 20px;
+   background: var(--background-a50);
+   backdrop-filter: blur(10px);
+   border-radius: 50px;
+   z-index: 10;
+   opacity: 0;
+   transition: opacity 0.3s ease;
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+   cursor: auto;
+}
+
+.controlsVisible {
+   opacity: 1;
+}
+
+.controlButton {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background: var(--background-a25);
+   border: 1px solid var(--cyan-a50);
+   color: var(--cyan);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.controlButton:hover {
+   background: var(--cyan-a25);
+   box-shadow: 0 0 15px var(--cyan-a25);
+   transform: scale(1.1);
+}
+
+.dotsContainer {
+   display: flex;
+   gap: 8px;
+}
+
+.dot {
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background: var(--elephant-light);
+   cursor: pointer;
+   transition: all 0.3s ease;
+   border: none;
+   opacity: .5;
+
+}
+
+.dot:hover, .activeDot {
+   background: var(--cyan);
+   opacity: 1;
+   transform: scale(1.2);
+}
+
+.activeDot {
+   box-shadow: 0 0 8px var(--cyan);
+}
+
+.emptyState {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   gap: 20px;
+   color: var(--elephant-light);
+}
+
+.emptyState p {
+   font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+   .carousel {
+      height: 400px;
+   }
+   
+   .title {
+      font-size: 1.5rem;
+   }
+   
+   .controls {
+      gap: 15px;
+      padding: 10px 16px;
+   }
+   
+   .controlButton {
+      width: 36px;
+      height: 36px;
+   }
+}
+
+@media (max-width: 480px) {
+   .carousel {
+      height: 300px;
+   }
+   
+   .title {
+      font-size: 1.3rem;
+   }
+   
+   .infoOverlay {
+      padding: 15px;
+   }
+   
+   .description {
+      font-size: 0.9rem;
+   }
+}

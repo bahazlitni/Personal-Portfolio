@@ -3,6 +3,7 @@ import { projects } from "@/data"
 import ProjectCard from "@/components/ui/ProjectCard"
 import styles from "./Projects.module.css"
 import AnimH1 from "@/components/ui/AnimH1"
+
 export default function Projects(){
    
    return <section className={styles.projects}>
