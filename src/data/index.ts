@@ -102,12 +102,6 @@ export const projects: T_Project[] = [
             height: 854,
             brightness: 0.2
          },
-                  {
-            publicLink: "/projects/eldara/image-0.png",
-            width: 1600,
-            height: 854,
-            brightness: 0.2
-         },
          {
             publicLink: "/projects/eldara/image-1.png",
             width: 1600,

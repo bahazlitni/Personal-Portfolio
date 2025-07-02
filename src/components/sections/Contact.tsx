@@ -163,6 +163,17 @@ function ContactForm(){
             )}
          </div>
          <div className={styles.inputGroup}>
+               <div className={styles.checkboxContainer}>
+                  <input
+                     type="checkbox"
+                     id="omitName"
+                     name="omitName"
+                     checked={formData.omitName}
+                     onChange={handleChange}
+                     className={styles.checkbox}
+                  />
+               <label htmlFor="omitName">Abstentiate</label>
+            </div>
             <input
                type="text"
                id="fullName"
@@ -173,17 +184,6 @@ function ContactForm(){
                placeholder="Please specify your full name"
                className={`${styles.input} ${formData.omitName ? styles.disabledInput : ''}`}
             />
-            <div className={styles.checkboxContainer}>
-               <input
-                  type="checkbox"
-                  id="omitName"
-                  name="omitName"
-                  checked={formData.omitName}
-                  onChange={handleChange}
-                  className={styles.checkbox}
-               />
-               <label htmlFor="omitName">Abstentiate</label>
-            </div>
          </div>
 
          <div className={styles.formGroup}>
