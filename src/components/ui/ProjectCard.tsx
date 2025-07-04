@@ -48,7 +48,11 @@ export default function ProjectCard({ project, ...props }: { project: T_Project 
               <a className="saturated-flare M-button" href={"/projects/" + project.linkLabel}>
                 View Project
               </a>
-              {project.githubUrl && <a className="cyan-flare M-button" href={project.githubUrl}>
+              {project.downloadForWindowsUrl && <a className="magenta-flare M-button" href={project.downloadForWindowsUrl}>
+                <Icon name="windows" />
+                Download
+              </a>}
+              {(project.isBig || !project.downloadForWindowsUrl) && project.githubUrl && <a className="cyan-flare M-button" href={project.githubUrl}>
                 <Icon name="github" />
                 View On Github
               </a>}

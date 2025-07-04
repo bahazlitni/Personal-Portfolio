@@ -69,7 +69,7 @@ export default function ProjectPage({project, ...props}: {project: T_Project}) {
 					</div>
 				</div>
       </div>
-								{(project.githubUrl || project.liveUrl) && 
+				{(project.githubUrl || project.downloadForWindowsUrl) && 
 				<div className={styles.githubAndDownloadButtonsConainter}>
 					{project.githubUrl && (
 						<motion.a
@@ -83,17 +83,40 @@ export default function ProjectPage({project, ...props}: {project: T_Project}) {
 						</motion.a>
 					)}
 
-					{project.liveUrl && (
+					{project.downloadForWindowsUrl && (
 					<motion.a
-						href={project.liveUrl}
+						href={project.downloadForWindowsUrl}
 						target="_blank"
 						rel="noopener noreferrer"
 						className="L-button magenta-flare"
 					>
-						<Icon name="download" />
-						<span>Download v-{project.lastVersion}</span>
+						<Icon name="windows" />
+						<span>Download</span>
 					</motion.a>
 					)}
+					{project.downloadForMacOSUrl && (
+					<motion.a
+						href={project.downloadForMacOSUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="L-button magenta-flare"
+					>
+						<Icon name="mac-os" />
+						<span>Download</span>
+					</motion.a>
+					)}
+					{project.downloadForLinuxUrl && (
+					<motion.a
+						href={project.downloadForLinuxUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="L-button magenta-flare"
+					>
+						<Icon name="linux" />
+						<span>Download</span>
+					</motion.a>
+					)}
+
 				</div>}
 
           <motion.p
@@ -133,58 +156,6 @@ export default function ProjectPage({project, ...props}: {project: T_Project}) {
       {project.images && project.images.length > 0 && 
 			<Carousel className={styles.carousel} images={project.images} />
 		}
-
-      {/* Technologies */}
-      {project.technologies && project.technologies.length > 0 && (
-        <motion.div
-          className={styles.techSection}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-        >
-          <h2 className={styles.sectionTitle}>Technologies Used</h2>
-          <div className={styles.techContainer}>
-            {project.technologies.map((tech, index) => (
-              <motion.div
-                key={index}
-                className={styles.techBadge}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.85 + (index * 0.05) }}
-              >
-                {tech}
-                <div className={styles.techGlow}></div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      )}
-
-      {/* Links */}
-      <motion.div
-        className={styles.linksSection}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.9 }}
-      >
-        <div className={styles.linksContainer}>
-
-
-          {project.liveUrl && (
-            <motion.a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-              whileHover={{ y: -5 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Icon name="external-link" />
-              <span>Visit Live Project</span>
-            </motion.a>
-          )}
-        </div>
-      </motion.div>
    </section>
 	</>
 }

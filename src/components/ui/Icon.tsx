@@ -1,6 +1,6 @@
 import React from 'react'
 import { MdEmail, MdSend, MdOutlineQuestionMark, MdOutlineMaximize, MdOutlineMinimize } from 'react-icons/md'
-import { FaLinkedin, FaGithub, FaArrowUp, FaChevronRight, FaChevronLeft, FaInstagram } from 'react-icons/fa'
+import { FaLinkedin, FaWindows, FaGithub, FaArrowUp, FaChevronRight, FaChevronLeft, FaInstagram, FaApple, FaLinux } from 'react-icons/fa'
 
 type IconProps = { name: string } & React.ComponentProps<typeof MdEmail>
 
@@ -16,6 +16,9 @@ export default function Icon({ name, ...props }: IconProps) {
       case "chevron-left"  : return <FaChevronLeft {...props} />
       case "maximize"      : return <MdOutlineMaximize {...props} />
       case "minimize"      : return <MdOutlineMinimize {...props} />
+      case "windows"       : return <FaWindows {...props} />
+      case "mac-os"        : return <FaApple {...props} />
+      case "linux"         : return <FaLinux {...props} />
       default: return <MdOutlineQuestionMark {...props} />
    }
 }

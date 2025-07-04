@@ -25,7 +25,9 @@ export interface T_Project {
    isBig: boolean
    detailedDescription?: string
    githubUrl?: string
-   liveUrl?: string
+   downloadForWindowsUrl?: string
+   downloadForMacOSUrl?: string
+   downloadForLinuxUrl?: string
    technologies?: string[]
    images: T_CarouselImage[]
 }
