@@ -4,7 +4,15 @@ import styles from "./ProjectCard.module.css"
 import { motion } from 'framer-motion'
 import {InfoBadge} from "@/components/ui/Badges"
 import CoverImage from "@/components/ui/CoverImage"
-import Icon from "@/components/ui/Icon"
+import ViewOnGithubButton from "@/components/ui/ViewOnGithubButton"
+import dynamic from 'next/dynamic'
+import VisitButton from "./VisitButton"
+const DownloadButton = dynamic(
+  () => import('@/components/ui/DownloadButton'),
+  { ssr: false }
+)
+
+
 
 export default function ProjectCard({ project, ...props }: { project: T_Project }) {
    return (
@@ -48,14 +56,9 @@ export default function ProjectCard({ project, ...props }: { project: T_Project 
               <a className="saturated-flare M-button" href={"/projects/" + project.linkLabel}>
                 View Project
               </a>
-              {project.downloadForWindowsUrl && <a className="magenta-flare M-button" href={project.downloadForWindowsUrl}>
-                <Icon name="windows" />
-                Download
-              </a>}
-              {(project.isBig || !project.downloadForWindowsUrl) && project.githubUrl && <a className="cyan-flare M-button" href={project.githubUrl}>
-                <Icon name="github" />
-                View On Github
-              </a>}
+              {<DownloadButton size="M" downloads={project.downloads} />}
+              {(project.isBig || !project.downloads) && <VisitButton href={project.visitUrl} size="M"/>}
+              {(project.isBig || !project.downloads && !project.visitUrl) && <ViewOnGithubButton href={project.githubUrl} size="M"/>}
             </div>
          </div>
       </motion.div>

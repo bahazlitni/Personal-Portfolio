@@ -3,10 +3,18 @@ import styles from "./ProjectPage.module.css"
 import AnimH1 from "@/components/ui/AnimH1"
 import Carousel from "@/components/ui/Carousel"
 import Image from "next/image"
-import Icon from "@/components/ui/Icon"
 import { motion } from "framer-motion"
 import { InfoBadge, FlareBadge } from "@/components/ui/Badges"
 import CoverImage from "@/components/ui/CoverImage"
+import ViewOnGithubButton from "@/components/ui/ViewOnGithubButton"
+import VisitButton from "@/components/ui/VisitButton"
+import dynamic from 'next/dynamic'
+import DemoFrame from "@/components/ui/DemoFrame"
+
+const DownloadButton = dynamic(
+  () => import('@/components/ui/DownloadButton'),
+  { ssr: false }
+)
 
 export default function ProjectPage({project, ...props}: {project: T_Project}) {
   return <>
@@ -69,54 +77,11 @@ export default function ProjectPage({project, ...props}: {project: T_Project}) {
 					</div>
 				</div>
       </div>
-				{(project.githubUrl || project.downloadForWindowsUrl) && 
+				{(project.githubUrl || project.downloads) && 
 				<div className={styles.githubAndDownloadButtonsConainter}>
-					{project.githubUrl && (
-						<motion.a
-						href={project.githubUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="L-button cyan-flare"
-						>
-						<Icon name="github" />
-						<span>View on GitHub</span>
-						</motion.a>
-					)}
-
-					{project.downloadForWindowsUrl && (
-					<motion.a
-						href={project.downloadForWindowsUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="L-button magenta-flare"
-					>
-						<Icon name="windows" />
-						<span>Download</span>
-					</motion.a>
-					)}
-					{project.downloadForMacOSUrl && (
-					<motion.a
-						href={project.downloadForMacOSUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="L-button magenta-flare"
-					>
-						<Icon name="mac-os" />
-						<span>Download</span>
-					</motion.a>
-					)}
-					{project.downloadForLinuxUrl && (
-					<motion.a
-						href={project.downloadForLinuxUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="L-button magenta-flare"
-					>
-						<Icon name="linux" />
-						<span>Download</span>
-					</motion.a>
-					)}
-
+					{<DownloadButton downloads={project.downloads} size="L" />}
+					{<ViewOnGithubButton href={project.githubUrl} size="L"/>}
+					{<VisitButton href={project.visitUrl} size="L" />}
 				</div>}
 
           <motion.p
@@ -156,6 +121,12 @@ export default function ProjectPage({project, ...props}: {project: T_Project}) {
       {project.images && project.images.length > 0 && 
 			<Carousel className={styles.carousel} images={project.images} />
 		}
+
+		{project.demoUrl && <section style={{width: '100%'}}>
+			<AnimH1>Project Demo</AnimH1>
+			<DemoFrame src={project.demoUrl} />
+		</section>}
+
    </section>
 	</>
 }

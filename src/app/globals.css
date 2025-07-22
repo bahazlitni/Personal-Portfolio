@@ -38,7 +38,7 @@
 
 html,
 body {
-  max-width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -284,11 +284,7 @@ p {
   align-items: center;
   justify-content: center;
   background-color: var(--background-a25);
-  border: 1px solid;
-}
-
-.outline-button {
-  border-color: var(--elephant-light);
+  border: 1px solid var(--elephant-light);
 }
 
 
@@ -315,6 +311,26 @@ p {
   gap: 12px;
   padding: 22px 36px;
   border-radius: 12px;
+}
+.S-button svg,
+.S-badge svg {
+  width: 10px;
+  height: 10px;
+}
+.M-button svg,
+.M-badge svg {
+  width: 14px;
+  height: 14px;
+}
+.L-button svg,
+.L-badge svg {
+  width: 18px;
+  height: 18px;
+}
+.XL-button svg,
+.XL-badge svg {
+  width: 22px;
+  height: 22px;
 }
 
 .S-badge {
@@ -411,4 +427,17 @@ p {
 
 .navLink:hover::after {
   width: 100%;
+}
+
+.demo-frame {
+  border-radius: 16px;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  overflow: hidden;
 }

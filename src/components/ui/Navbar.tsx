@@ -8,7 +8,7 @@ import Burger from "@/components/ui/Burger"
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
-  return <nav className={styles.navbar}>
+  return <nav id="__nav__" className={styles.navbar}>
     <div className={styles.logo}>Baha Zlitni</div>
     <Burger className={styles.burger} onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
 

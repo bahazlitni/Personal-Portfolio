@@ -14,8 +14,6 @@ interface CarouselProps {
 }
 
 export default function Carousel({ images, autoPlay = true, interval = 5000, className, ...props }: CarouselProps) {
-   console.log("Carousel rendered with images:", images)
-
    const [currentIndex, setCurrentIndex] = useState(0)
    const [isFullScreen, setIsFullScreen] = useState(false)
    const [isHovering, setIsHovering] = useState(false)

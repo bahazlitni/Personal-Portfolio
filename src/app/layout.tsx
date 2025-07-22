@@ -31,9 +31,9 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <header><Navbar /></header>
         <FloatingShardsBackground/>
-        <main>{children}</main>
+        <main id="__main__">{children}</main>
         <Footer />        
-      </body>
+      </body> 
     </html>
   )
 }

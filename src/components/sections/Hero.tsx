@@ -1,5 +1,6 @@
 import styles from './Hero.module.css'
 import AnimH1 from '@/components/ui/AnimH1'
+import Icon from '@/components/ui/Icon'
 
 export default function Hero() {
   return <section id="home" className={styles.hero}>
@@ -10,7 +11,10 @@ export default function Hero() {
       </div>
       <div className={styles.buttonsContainer}>
          <a className="saturated-flare L-button" href="#projects">View My Projects</a>
-         <a className="outline-button L-button" href="#contact">Get in Touch</a>
+         <a className="outline-button L-button" href="/CV-FR.pdf">
+            <Icon name="download" />
+            Download CV
+         </a>
       </div>
    </section>
 }
